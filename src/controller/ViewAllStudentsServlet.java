@@ -28,8 +28,8 @@ public class ViewAllStudentsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ListMusicStudentHelper dao = new ListMusicStudentHelper();
-		request.setAttribute("allItems", dao.showAllStudents());
-		String path = "/shopping-list.jsp";
+		request.setAttribute("allStudents", dao.showAllStudents());
+		String path = "/student-list.jsp";
 		if(dao.showAllStudents().isEmpty()){
 			path = "/index.html";
 		}
